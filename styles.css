@@ -1,0 +1,48 @@
+.vosk-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.vosk-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.vosk-button:disabled {
+    background-color: #45a049;
+    cursor: not-allowed;
+}
+
+.vosk-subtitles {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 80%;
+    text-align: center;
+    z-index: 10000;
+}
+
+.vosk-results {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.vosk-partial {
+    color: #aaa;
+}

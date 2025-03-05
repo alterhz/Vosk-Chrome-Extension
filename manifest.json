@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Vosk Voice Recognition",
+  "version": "1.0",
+  "description": "Add voice recognition to any webpage using Vosk",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles.css"],
+      "js": ["vosk.js", "content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["models/*"],
+    "matches": ["<all_urls>"]
+  }]
+}
